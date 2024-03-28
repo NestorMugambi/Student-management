@@ -5,7 +5,7 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim COMMAND As MySqlCommand
         conn = New MySqlConnection
-        conn.ConnectionString = "server=localhost;userid=root;password=ness;database=world"
+        conn.ConnectionString = "server=localhost;userid=root;password=ness;database=students"
 
         Try
             conn.Open()
