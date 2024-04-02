@@ -55,4 +55,27 @@ Public Class Form3
             conn.Close()
         End Try
     End Sub
+
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        conn = New MySqlConnection
+        conn.ConnectionString = "server=localhost;userid=root;password=ness;database=students"
+
+        Try
+            conn.Open()
+
+
+            Dim name As String = TextBox2.Text
+            Dim stm As String = $"DELETE FROM teachers WHERE teacher_name = '{name}'"
+            Dim da As New MySqlDataAdapter(stm, conn)
+            Dim ds As New DataSet()
+            If da.Fill(ds) Then
+                DataGridView1.DataSource = ds.Tables(0)
+            End If
+
+            conn.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            conn.Close()
+        End Try
+    End Sub
 End Class
