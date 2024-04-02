@@ -4,28 +4,31 @@ Public Class Form1
     Dim conn As MySqlConnection
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.IsMdiContainer = True
+        With Form2
+            'sets the current multiple-document interface(MDI) parent form of this form
+            .MdiParent = Me
+            'show the form2
+            .Show()
+        End With
 
 
-        conn = New MySqlConnection
-        conn.ConnectionString = "server=localhost;userid=root;password=ness;database=world"
 
-        Try
-            conn.Open()
-            Dim strInput As String
+    End Sub
 
-            Dim country As String = TextBox1.Text
-            Dim stm As String = $"SELECT `Name`, `Continent`, `Region`, `Population`, `LifeExpectancy` FROM country WHERE `Continent` = '{country}' "
-            Dim da As New MySqlDataAdapter(stm, conn)
-            Dim ds As New DataSet()
-            If da.Fill(ds) Then
-                DataGridView1.DataSource = ds.Tables(0)
-            End If
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.IsMdiContainer = True
+        With Form3
+            'sets the current multiple-document interface(MDI) parent form of this form
+            .MdiParent = Me
+            'show the form3
+            .Show()
+        End With
 
-            conn.Close()
-        Catch ex As Exception
-            MsgBox(ex.Message)
-            conn.Close()
-        End Try
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+
 
     End Sub
 End Class

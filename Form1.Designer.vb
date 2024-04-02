@@ -23,40 +23,48 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Button1 = New Button()
-        DataGridView1 = New DataGridView()
-        TextBox1 = New TextBox()
-        CType(DataGridView1, ComponentModel.ISupportInitialize).BeginInit()
+        Button2 = New Button()
+        Button3 = New Button()
+        Button4 = New Button()
         SuspendLayout()
         ' 
         ' Button1
         ' 
         Button1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        Button1.Location = New Point(180, 295)
+        Button1.Location = New Point(45, 43)
         Button1.Name = "Button1"
-        Button1.Size = New Size(112, 41)
+        Button1.Size = New Size(148, 89)
         Button1.TabIndex = 0
-        Button1.Text = "Button1"
+        Button1.Text = "STUDENTS"
         Button1.UseVisualStyleBackColor = True
         ' 
-        ' DataGridView1
+        ' Button2
         ' 
-        DataGridView1.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left Or AnchorStyles.Right
-        DataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
-        DataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
-        DataGridView1.ColumnHeadersHeight = 34
-        DataGridView1.Location = New Point(12, 12)
-        DataGridView1.Name = "DataGridView1"
-        DataGridView1.RowHeadersWidth = 62
-        DataGridView1.Size = New Size(380, 223)
-        DataGridView1.TabIndex = 1
+        Button2.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
+        Button2.Location = New Point(287, 43)
+        Button2.Name = "Button2"
+        Button2.Size = New Size(150, 89)
+        Button2.TabIndex = 3
+        Button2.Text = "TEACHERS"
+        Button2.UseVisualStyleBackColor = True
         ' 
-        ' TextBox1
+        ' Button3
         ' 
-        TextBox1.Anchor = AnchorStyles.Bottom Or AnchorStyles.Left
-        TextBox1.Location = New Point(-6, 300)
-        TextBox1.Name = "TextBox1"
-        TextBox1.Size = New Size(150, 31)
-        TextBox1.TabIndex = 2
+        Button3.Location = New Point(543, 43)
+        Button3.Name = "Button3"
+        Button3.Size = New Size(163, 89)
+        Button3.TabIndex = 4
+        Button3.Text = "LIBRARY"
+        Button3.UseVisualStyleBackColor = True
+        ' 
+        ' Button4
+        ' 
+        Button4.Location = New Point(607, 334)
+        Button4.Name = "Button4"
+        Button4.Size = New Size(181, 104)
+        Button4.TabIndex = 5
+        Button4.Text = "Button4"
+        Button4.UseVisualStyleBackColor = True
         ' 
         ' Form1
         ' 
@@ -64,18 +72,18 @@ Partial Class Form1
         AutoScaleMode = AutoScaleMode.Font
         AutoSize = True
         ClientSize = New Size(800, 450)
-        Controls.Add(TextBox1)
-        Controls.Add(DataGridView1)
+        Controls.Add(Button4)
+        Controls.Add(Button3)
+        Controls.Add(Button2)
         Controls.Add(Button1)
         Name = "Form1"
         Text = "Form1"
-        CType(DataGridView1, ComponentModel.ISupportInitialize).EndInit()
         ResumeLayout(False)
-        PerformLayout()
     End Sub
 
     Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Button4 As Button
 
 End Class
